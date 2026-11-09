@@ -49,7 +49,7 @@ def predict_sales():
 @superkart_api.post('/v1/predictbatch')
 def predict_sales_batch():
     # Get the uploaded CSV file from the request
-    file = request.files['file']
+    file = request.files['/content/drive/MyDrive/batch_data.csv']
 
     # Read the file into a DataFrame
     input_data = pd.read_csv(file)
